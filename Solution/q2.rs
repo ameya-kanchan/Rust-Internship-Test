@@ -18,3 +18,11 @@ fn first_occurrence(arr: &[i32], target: i32) -> Option<usize> {
     }
     None
 }
+fn main() {
+    let arr = [1, 2, 2, 2, 3, 4, 5, 6];
+    let target = 2;
+    match first_occurrence(&arr, target) {
+        Some(index) => println!("The first occurrence of {} is at index {}", target, index),
+        None => println!("{} is not found in the array", target),
+    }
+}
